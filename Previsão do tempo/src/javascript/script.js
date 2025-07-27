@@ -28,7 +28,8 @@ document.querySelector('#search').addEventListener('submit', async (event) => {
             tempIcon: json.weather[0].icon,
             windSpeed: json.wind.speed,
             humidity: json.main.humidity,
-    });
+        });
+        
     } else {
         document.querySelector('#weather').classList.remove('show');
         showAlert(`Não foi possível localizar...
@@ -43,9 +44,9 @@ document.querySelector('#search').addEventListener('submit', async (event) => {
 
         document.querySelector('#weather').classList.add('show');
 
-        document.querySelector('#title').innerHTML = `${json.city},${json.country}`;
+        document.querySelector('#title').innerHTML = `${json.city}, ${json.country}`;
 
-        document.querySelector('#temp_value').innerHTML = `${json.temp.toFixed(1).toString().replace('.', ',')} <sup>C°</sup>`;
+        document.querySelector('#temp_value').innerHTML = `${json.temp.toFixed(0).toString().replace('.', ',')} <sup>C°</sup>`;
 
         document.querySelector('#temp_description').innerHTML = `${json.description}`;
 
@@ -57,7 +58,7 @@ document.querySelector('#search').addEventListener('submit', async (event) => {
         
         document.querySelector('#humidity').innerHTML = `${json.humidity}%`;
 
-        document.querySelector('#wind').innerHTML = `${json.windSpeed.toFixed(1)}km/h`;
+        document.querySelector('#wind').innerHTML = `${json.windSpeed.toFixed(1).toString().replace('.', ',')} mph`;
 
     }
 

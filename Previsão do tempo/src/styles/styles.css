@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +27,7 @@ body {
     align-items: center;
     gap: 8px;
     border: 1px solid;
-    border-radius: 1px;
+    border-radius: 8px;
     padding: 4px 12px;
 }
 
@@ -56,6 +59,7 @@ body {
 }
 
 #weather #title {
+    font-family: "Open Sans", sans-serif;
     text-align: center;
     margin-bottom: 5px;
     font-weight: 600;
@@ -79,6 +83,7 @@ body {
 }
 
 #temp_value {
+    font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 50px;
     line-height: 55px;
@@ -97,6 +102,7 @@ body {
 }
 
 #other_infos .info {
+    font-family: "Open Sans", sans-serif;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -136,9 +142,11 @@ body {
 }
 
 #alert {
+    font-family: "Open Sans", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 
 #alert img {
